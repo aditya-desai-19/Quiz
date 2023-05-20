@@ -10,12 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment = ButtonFragment()
-        val tv = fragment.view?.findViewById<Button>(R.id.btn)
-        tv?.text = "Enter"
+        val fragment = StartFragment()
         val fragmentManager = supportFragmentManager
         val trans = fragmentManager.beginTransaction()
         trans.add(R.id.container, fragment)
         trans.commit()
     }
+
 }

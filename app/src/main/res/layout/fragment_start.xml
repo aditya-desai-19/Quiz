@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartFragment">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Enter your name"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/input_bg"
+        android:padding="10dp"
+        android:text=""
+        />
+
+    <Button
+        android:id="@+id/enterbtn"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Enter"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/blue"
+         />
+
+</LinearLayout>
