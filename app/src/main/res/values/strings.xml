@@ -2,4 +2,12 @@
     <string name="app_name">Quiz_App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Questions-->
+    <string name="q1">Which is not a programming language?</string>
+    <string name="q2">Which is a Object Oriented programming language?</string>
+    <string name="q3">Which is a SQL database?</string>
+    <string name="q4">Which is a NoSqL database?</string>
+    <string name="q5">Which is not a OS?</string>
+
 </resources>
