@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 
 
 class StartFragment : Fragment() {
@@ -25,6 +26,8 @@ class StartFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_start, container, false)
 
+        val data: Data? = activity?.let { ViewModelProvider(it)[Data::class.java] }
+
         val name = view.findViewById<EditText>(R.id.username)
 
         val btn = view.findViewById<Button>(R.id.enterbtn)
@@ -33,6 +36,7 @@ class StartFragment : Fragment() {
                 Toast.makeText(activity, "Please enter name", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(activity, "Entering to main screen", Toast.LENGTH_SHORT).show()
+                data?.userName = name.text.toString()
                 val fragment = MainFragment()
                 val fragmentManager = activity?.supportFragmentManager
                 val trans = fragmentManager?.beginTransaction()

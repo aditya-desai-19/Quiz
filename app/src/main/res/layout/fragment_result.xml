@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ResultFragment">
 
@@ -12,16 +13,65 @@
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginTop="200dp"
-        android:background="@drawable/input_bg"
+        android:backgroundTint="#F8F6F4"
+        app:cardCornerRadius="20dp"
         >
 
         <TextView
+            android:id="@+id/resultTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result"
             android:textSize="20dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="'s Score"
+            android:textSize="20dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="120dp"
+            >
+
+            <TextView
+                android:id="@+id/correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="35dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/5"
+                android:textSize="35dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/tryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:backgroundTint="#9DB2BF"
+        />
 
 </LinearLayout>
